@@ -1,12 +1,12 @@
 <template>
   <div id="app">   
-    <Login/>
+    <Login v-if="this.status == 1" @submit-login="submitLogin()"/>
     
   </div>
 </template>
 
 <script>
-import Login from './components/Login'
+import Login from './components/loginScreen/Login'
 
 
 
@@ -15,11 +15,22 @@ export default {
   name: 'App',
   components: {
     Login
-  }
+  },
+  data() {
+    return {
+      status: 1
+    }
+  },
+  methods: {
+    submitLogin() {
+      return  this.status;
+    }
+  },
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
