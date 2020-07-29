@@ -1,6 +1,6 @@
 <template>
     <div>
-    <p>{{alunos[0]}}</p>
+    <p>{{aluno}}</p>
     
     </div>
 </template>
@@ -9,9 +9,12 @@
     export default {
         data() {
             return {
-                alunos: ['Marcos', 'Jose', 'Ana', 'Maria', 'Carla', 'Pedro', 'Guilherme', 'Felipe', 'Diego', 'Thiago', 'Nadia', 'Victor']
+                
             }
         },
+        props: {
+            aluno: {type: String}
+        }
     }
 </script>
 
