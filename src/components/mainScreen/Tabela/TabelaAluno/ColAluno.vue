@@ -1,6 +1,6 @@
 <template>
     <div>
-    <p v-for="aluno in alunos" v-bind:key="aluno">Marcos</p>
+    <p>{{alunos[0]}}</p>
     
     </div>
 </template>

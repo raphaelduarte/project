@@ -6,7 +6,7 @@
           <tr>
             <td>Data</td>
             <td>
-              <input class="col-sm-10" type="text" placeholder="Area para comentario" />
+              <input class="col-sm-10" type="text" placeholder="Data da aula" />
             </td>
           </tr>
           <tr>
