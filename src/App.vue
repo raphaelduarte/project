@@ -1,12 +1,13 @@
 <template>
-  <div id="app">   
-    <Login v-if="this.status == 1" @submit-login="submitLogin()"/>
-    
+  <div id="app">  
+    <Login v-if="this.status == 0" @submit-login="submitLogin()"/>
+    <Screen/> 
   </div>
 </template>
 
 <script>
 import Login from './components/loginScreen/Login'
+import Screen from './components/mainScreen/Screen'
 
 
 
@@ -14,7 +15,8 @@ import Login from './components/loginScreen/Login'
 export default {
   name: 'App',
   components: {
-    Login
+    Login,
+    Screen
   },
   data() {
     return {

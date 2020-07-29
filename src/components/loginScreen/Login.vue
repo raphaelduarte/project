@@ -3,7 +3,6 @@
     <b-container>
       <login-header></login-header>
       <login-password></login-password>
-      <login-button @submit-login="$emit('submit-login', $event.this.status)"></login-button>
       
    </b-container> 
   </div>
@@ -11,14 +10,12 @@
 <script>
 import LoginPassword from './LoginPassword'
 import LoginHeader from './LoginHeader'
-import LoginButton from './LoginButton'
 
 export default {
   name: 'Login',
   components: {
     LoginPassword,
-    LoginHeader,
-    LoginButton
+    LoginHeader
   },
   data(){
     return {
