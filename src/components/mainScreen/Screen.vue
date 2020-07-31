@@ -7,15 +7,20 @@
 </template>
 
 <script>
-    import SideBar from '../mainScreen/SideBar'
+    
     import Tabela from './Tabela/Tabela'
+
     export default {
+        data() {
+            return {
+                
+            }
+        },
         components: {
             Tabela
-        },
-        data() {
-            SideBar
+            
         }
+        
     }
 </script>
 
