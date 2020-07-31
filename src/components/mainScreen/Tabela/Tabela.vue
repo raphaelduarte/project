@@ -2,6 +2,7 @@
     <div>
       <tabela-professor></tabela-professor>
       <tabela-aluno></tabela-aluno>
+      <button type="button" class="btn btn-primary enviarRelatorio">Enviar Relatório</button>
     </div>
 </template>
 
@@ -23,6 +24,10 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+  .enviarRelatorio{
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 10%;
+  }
 </style>
