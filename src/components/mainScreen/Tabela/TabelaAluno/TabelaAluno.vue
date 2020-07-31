@@ -12,10 +12,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in qtdAlunos" v-bind:key="item" v-bind:carregarNomes="chamaAlunos">
-          <th scope="row">{{qtdAlunos[this.iterador]}}</th>
+        <tr v-for="item in qtdAlunos" v-bind:key="item">
+          <th scope="row">{{qtdAlunos[item] + 1}}</th>
           <td>
-            <ColAluno v-bind:aluno="alunos[this.iterador]" />
+            <ColAluno v-bind:aluno="alunos[item]" />
           </td>
           <td>
             <Presenca />
@@ -45,7 +45,7 @@ import FeedbackProfessor from "./FeedbackProfessor";
 export default {
   data() {
     return {
-      qtdAlunos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      qtdAlunos: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
       alunos: [
         "Marcos",
         "Jose",
@@ -59,8 +59,7 @@ export default {
         "Thiago",
         "Nadia",
         "Victor",
-      ],
-      iterador: 0
+      ]
     };
   },
   components: {
@@ -71,14 +70,10 @@ export default {
     Comentario,
   },
   methods: {
-    chamaAlunos() {
-      this.iterador = this.iterador + 1
-    }
+    
   },
   props: {
-    carregarNomes: {
-      chamaAlunos: {type: Function}
-    },
+    
     
   },
 };
