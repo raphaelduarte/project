@@ -12,10 +12,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in qtdAlunos" v-bind:key="item">
-          <th scope="row">{{qtdAlunos[item] + 1}}</th>
+        <tr v-for="(item, index) in alunos" v-bind:key="index">
+          <th scope="row">{{index + 1}}</th>
           <td>
-            <ColAluno v-bind:aluno="alunos[item]" />
+            <ColAluno v-bind:aluno="item" />
           </td>
           <td>
             <Presenca />
@@ -40,8 +40,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in qtdAlunos" v-bind:key="item">
-          <th>{{qtdAlunos[item] + 1}}</th>
+        <tr v-for="(item, index) in alunos" v-bind:key="index">
+          <th>{{index + 1}}</th>
           <td>
             <AnotacoesAula/>
           </td>
@@ -62,7 +62,6 @@ import AnotacoesAula from './AnotacoesAula';
 export default {
   data() {
     return {
-      qtdAlunos: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
       alunos: [
         "Marcos",
         "Jose",

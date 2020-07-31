@@ -26,8 +26,7 @@
 
 <style scoped>
   .enviarRelatorio{
-    float: right;
-    margin-right: 10%;
+    margin: auto;
     margin-bottom: 10%;
   }
 </style>
